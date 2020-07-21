@@ -1,0 +1,12 @@
+{
+  "name": "ocn-api-client",
+  "version": "1.0.0",
+  "description": "OCN Integration",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0"
+  }
+}
