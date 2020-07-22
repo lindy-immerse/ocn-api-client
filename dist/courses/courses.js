@@ -18,17 +18,13 @@ const axios_1 = __importDefault(require("axios"));
 const url = "/learning/odatav4/public/admin/ocn/v1/OcnCourses";
 function OCNPostCourses(host, bearerToken, request) {
     return __awaiter(this, void 0, void 0, function* () {
-        console.log("HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        console.log(request);
         const response = yield axios_1.default.post(host + url, request, {
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${bearerToken}`,
             }
         });
-        console.log("inside OCNPostCourses", response);
-        console.log("inside OCNPostCourses Data", response.data);
-        // return response.data as OCNCoursesResponse;
+        return response.data;
     });
 }
 exports.OCNPostCourses = OCNPostCourses;
