@@ -15,7 +15,7 @@ const axios_1 = __importDefault(require("axios"));
 /**
  * Upload Courses
  */
-const url = "learning/odatav4/public/admin/learningevent-service/v1/OCNLearningEvents";
+const url = "/learning/odatav4/public/admin/learningevent-service/v1/OCNLearningEvents";
 function OCNCompletionStatus(host, bearerToken, completion) {
     return __awaiter(this, void 0, void 0, function* () {
         const response = yield axios_1.default.post(host + url, completion, {

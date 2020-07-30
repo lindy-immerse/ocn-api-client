@@ -5,7 +5,7 @@ import { OCNCompletionStatus } from "./model";
  * Upload Courses
  */
 
-const url = "learning/odatav4/public/admin/learningevent-service/v1/OCNLearningEvents"
+const url = "/learning/odatav4/public/admin/learningevent-service/v1/OCNLearningEvents"
 
 export async function OCNCompletionStatus(host: string, bearerToken: string, completion: OCNCompletionStatus) {
 
