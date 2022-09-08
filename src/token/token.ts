@@ -7,12 +7,20 @@ import { OCNTokenRequest, OCNTokenResponse } from "./model";
 
 const url = "/learning/oauth-api/rest/v1/token"
 
-export async function OCNSignin(host: string, clientId: string, clientSecret: string, userId: string): Promise<OCNTokenResponse> {
+export async function OCNSignin(host: string, clientId: string, clientSecret: string, userId: string, applicationInterfaceKey?: string): Promise<OCNTokenResponse> {
     const tokenRequest = new OCNTokenRequest(
         clientId, clientSecret, userId,
     );
 
-    const response = await axios.post(host + url, tokenRequest);
+    let headers = {};
+
+    if (applicationInterfaceKey) {
+        headers = {
+            "Application-Interface-Key": applicationInterfaceKey
+        }
+    }
+
+    const response = await axios.post(host + url, tokenRequest, { headers: headers });
 
     return response.data as OCNTokenResponse;
 }

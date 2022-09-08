@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.OCNSignin = exports.OCNCompletionStatus = exports.OCNPostCourses = void 0;
 var courses_1 = require("./courses/courses");
-exports.OCNPostCourses = courses_1.OCNPostCourses;
+Object.defineProperty(exports, "OCNPostCourses", { enumerable: true, get: function () { return courses_1.OCNPostCourses; } });
 var completion_1 = require("./completion/completion");
-exports.OCNCompletionStatus = completion_1.OCNCompletionStatus;
+Object.defineProperty(exports, "OCNCompletionStatus", { enumerable: true, get: function () { return completion_1.OCNCompletionStatus; } });
 var token_1 = require("./token/token");
-exports.OCNSignin = token_1.OCNSignin;
+Object.defineProperty(exports, "OCNSignin", { enumerable: true, get: function () { return token_1.OCNSignin; } });
